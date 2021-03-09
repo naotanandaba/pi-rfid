@@ -11,16 +11,16 @@ class Rfid_rc522:
                 uid_hex = hex(uid).upper()
                 return uid_hex
 if __name__ == "__main__":
-	stop=" "
-	while(stop!="enter"):
-		os.system("clear")
-        	try:
-			print("Scan your card","\t")
-                	rf = Rfid_rc522()
-                	uid = rf.scan_uid()
-			print("Your card number is:","\t")
-			print(uid.strip("0x"),"\t")
-		finally:
-			stop="enter"
-			stop = input("Scan again")
-			GPIO.cleanup()
+stop=""
+while(stop!="enter"):
+os.system("clear")
+try:
+print("Scan your card","\t")
+        rf = Rfid_rc522()
+        uid = rf.scan_uid()
+print("Your card number is:","\t")
+print(uid.strip("0x"),"\t")
+finally:
+stop="enter"
+stop = input("Scan again")
+GPIO.cleanup()
