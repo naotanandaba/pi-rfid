@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 import os
 from mfrc522 import SimpleMFRC522
 
-class Rfid...:
+class Rfid_rc522:
         # return uid in hexa str
         def read_uid(self):
                 reader = SimpleMFRC522()
