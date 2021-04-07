@@ -23,3 +23,4 @@ if __name__ == "__main__":
             opc="n"
             opc = input("Scan again (y/n):")
             GPIO.cleanup()
+            
